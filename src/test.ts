@@ -6,8 +6,16 @@ import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+import { Component } from '@angular/core';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 
-declare const require: any;
+interface Context  {
+  keys(): string[];
+  (value: unknown , index: number, array: unknown[]): unknown[];
+}
+
+declare const require: {context(start: string, flag: boolean, end: RegExp): Context
+};
 
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
@@ -15,6 +23,6 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-const context = require.context('./', true, /\.spec\.ts$/);
+const context: Context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);

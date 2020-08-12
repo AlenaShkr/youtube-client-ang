@@ -1,5 +1,6 @@
-<app-header></app-header>
-<app-result-list></app-result-list>
-
+<app-header #attrHeader (clicked)="onClick($event)"></app-header>
+<app-sort-criteria-list *ngIf="attrHeader.isShowCriteriaBlock">
+</app-sort-criteria-list>
+<app-result-list *ngIf="attrHeader.isClickedButtonSearch"></app-result-list>
 
 <router-outlet></router-outlet>

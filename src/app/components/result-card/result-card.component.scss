@@ -1,0 +1,61 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+  padding-bottom: 15%;
+
+  background: #E5E5E5;
+  color: black;
+
+  .mat-button {
+    background: #2f80ed;
+    color: white;
+  }
+
+  .mat-card-image {
+    width: 90%;
+  }
+
+  .mat-icon {
+    margin-left: 10px;
+  }
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .count-of-view,
+  .likes,
+  .dislikes,
+  .comments {
+    display: flex;
+    align-items: center;
+  }
+
+  .dislikes:before {
+    content: '\\';
+    position: relative;
+    left: 40%;
+    bottom: 4px;
+    transform: rotate(-20deg);
+    font-size: 32px;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+}
+}

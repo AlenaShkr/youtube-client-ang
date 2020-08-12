@@ -8,6 +8,13 @@ import { SearchRequestComponent } from './components/search-request/search-reque
 import { SortCriteriaListComponent } from './components/sort-criteria-list/sort-criteria-list.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
 import { ResultCardComponent } from './components/result-card/result-card.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule }   from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { ResultCardComponent } from './components/result-card/result-card.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatCardModule,
+    FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

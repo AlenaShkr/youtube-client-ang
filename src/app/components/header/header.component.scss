@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  background: #E5E5E5;
+  width: 100%;
+  padding: 2% 0px;
+}
+
+.mat-raised-button {
+  width: 24px;
+  height: 5vh;
+
+  background-image: url(../../../assets/icon/filter.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-color: #2f80ed;
+}
+
+.login-name {
+  margin-left: 10%;
+  align-items: right;
+}
+
+.login-button {
+  width: 24px;
+  height: 5vh;
+  background-image: url(../../../assets/icon/Subtract.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

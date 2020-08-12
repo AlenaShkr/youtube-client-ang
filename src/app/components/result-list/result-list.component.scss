@@ -1,0 +1,12 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 5%;
+
+  width: 80%;
+  height: 70vh;
+  margin: 20px auto;
+  overflow-y: scroll;
+  overflow-x: auto;
+}

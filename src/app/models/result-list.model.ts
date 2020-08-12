@@ -1,5 +1,5 @@
 import { ResultCard } from './result-card.model';
 
-export interface SearchResult {
+export interface ResultList {
   searchResult: ResultCard[];
 }

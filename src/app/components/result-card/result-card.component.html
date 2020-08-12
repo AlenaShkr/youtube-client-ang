@@ -1,1 +1,27 @@
-<p>result-card works!</p>
+
+<mat-card class="card">
+  <img mat-card-image src="{{card.snippet.thumbnails.default.url}}"
+  alt="Photo video">
+  <mat-card-content>
+    <div class="count-of-view">
+      <mat-icon aria-hidden="false" aria-label="eye icon">visibility</mat-icon>
+      {{card.statistics.viewCount}}
+    </div>
+    <div class="likes">
+      <mat-icon aria-hidden="false" aria-label="favorite icon">favorite</mat-icon>
+      {{card.statistics.likeCount}}
+    </div>
+    <div class="dislikes">
+      <mat-icon aria-hidden="false" aria-label="dislike icon">favorite</mat-icon>
+      {{card.statistics.dislikeCount}}
+    </div>
+    <div class="comments">
+      <mat-icon aria-hidden="false" aria-label="comment icon">comments</mat-icon>
+      {{card.statistics.commentCount}}
+    </div>
+  </mat-card-content>
+  <mat-card-title>{{card.snippet.title}}</mat-card-title>
+  <mat-card-actions>
+    <button mat-button>Read more...</button>
+  </mat-card-actions>
+</mat-card>

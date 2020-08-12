@@ -1,7 +1,7 @@
 interface ThumbnailsSize {
   url: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
 }
 
 interface Thumbnails {

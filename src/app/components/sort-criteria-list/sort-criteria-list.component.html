@@ -1,7 +1,7 @@
 <mat-nav-list >Sorted by:
   <ul class="filter-item">
-      <a matLine href="#">date</a>
-      <a matLine href="#">count of view</a>
+      <a matLine  (click) = "onFilterByDate()">date</a>
+      <a matLine (click) = "onFilterByCountView()">count of view</a>
       <a matLine href="#">by word or sentence
         <input matInput class="filter-input" type="text">
       </a>

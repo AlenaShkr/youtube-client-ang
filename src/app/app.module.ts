@@ -15,6 +15,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule }   from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BorderDownColourDependOnPublishDatePipe } from './pipes/border-down-colour-depend-on-publish-date.pipe';
+import { BorderDownDependOnPublishDateDirective } from './directives/border-down-depend-on-publish-date.directive';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SearchRequestComponent,
     SortCriteriaListComponent,
     ResultListComponent,
-    ResultCardComponent
+    ResultCardComponent,
+    BorderDownColourDependOnPublishDatePipe,
+    BorderDownDependOnPublishDateDirective
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

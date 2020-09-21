@@ -1,5 +1,5 @@
 
-<mat-card class="card">
+<mat-card class="card" [appBorderDownDependOnPublishDate]="card.snippet.publishedAt">
   <img mat-card-image src="{{card.snippet.thumbnails.default.url}}"
   alt="Photo video">
   <mat-card-content>

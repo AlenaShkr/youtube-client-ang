@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ResultList } from '../../models/result-list.model';
-import * as dataFile from '../../../assets/data/data.json';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-result-list',
   templateUrl: './result-list.component.html',
-  styleUrls: ['./result-list.component.scss']
+  styleUrls: ['./result-list.component.scss'],
+  providers: [DataService]
 })
 export class ResultListComponent implements OnInit {
-  public cards: Object[] = dataFile.items;
+  public cards: Object[];
   public searchResult: ResultList;
 
-  constructor() { }
+  constructor(private Service: DataService ) { }
 
   public ngOnInit(): void {
+    this.cards = this.Service.getData();
   }
 
 }
